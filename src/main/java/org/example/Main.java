@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         ListOfWater listWaters = new ListOfWater();
         listWaters.setListWater(Arrays.asList(
-                ProductBuilder.getInstanceWater().setName("Sviatoy istochnik").setCost(50).setVolume(2).build(),
-                ProductBuilder.getInstanceWater().setName("Fruto niania").setCost(80).setVolume(0.5).build(),
-                ProductBuilder.getInstanceWater().setName("Bon Aqua").setCost(54).setVolume(1).build()));
+                BottelOfWaterBuilder.getInstance().setName("Sviatoy istochnik").setCost(50).setVolume(2).build(),
+                BottelOfWaterBuilder.getInstance().setName("Fruto niania").setCost(80).setVolume(0.5).build(),
+                BottelOfWaterBuilder.getInstance().setName("Bon Aqua").setCost(54).setVolume(1).build()));
         GeneralVendingMachine <BottleOfWater> waterMachine = new GeneralVendingMachine<>(listWaters.getListWater());
         System.out.println(waterMachine.getProduct("Bon Aqua"));
 
